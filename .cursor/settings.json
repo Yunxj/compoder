@@ -1,0 +1,27 @@
+{
+  "mcp": {
+    "enabled": true,
+    "servers": [
+      {
+        "name": "Chrome Debug",
+        "command": "chrome",
+        "args": [
+          "--remote-debugging-port=9222",
+          "--user-data-dir=${workspaceFolder}/.chrome-debug-profile",
+          "http://localhost:3000"
+        ],
+        "onStart": "always"
+      },
+      {
+        "name": "Edge Debug",
+        "command": "msedge",
+        "args": [
+          "--remote-debugging-port=9222",
+          "--user-data-dir=${workspaceFolder}/.edge-debug-profile",
+          "http://localhost:3000"
+        ],
+        "onStart": "never"
+      }
+    ]
+  }
+} 
